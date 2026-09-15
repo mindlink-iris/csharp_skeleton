@@ -24,5 +24,13 @@ namespace WakingSkeleton.Test
             rover.Move(Command.Backward);
             Assert.That(rover.Position, Is.EqualTo(new Position(0, 1)));
         }
+
+        [Test]
+        public void MoveBackwardFromSouthMovesUpByOne()
+        {
+            var rover = new Rover(new Position(1, 1), Heading.South);
+            rover.Move(Command.Backward);
+            Assert.That(rover.Position, Is.EqualTo(new Position(1, 2)));
+        }
     }
 }
