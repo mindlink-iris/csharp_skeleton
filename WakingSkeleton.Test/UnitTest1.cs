@@ -1,5 +1,6 @@
 namespace WakingSkeleton.Test;
 
+[TestFixture]
 public class Tests
 {
 
