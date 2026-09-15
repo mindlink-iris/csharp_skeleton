@@ -21,6 +21,10 @@
             {
                 this.position = new Position(this.position.X, this.position.Y - 1);
             }
+            if (command == Command.Backward && heading == Heading.East)
+            {
+                this.position = new Position(this.position.X - 1, this.position.Y);
+            }
         }
     }
 }

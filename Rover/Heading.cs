@@ -9,6 +9,7 @@ namespace MarsRover
     public enum Heading
     {
         North,
-        South
+        South,
+        East
     }
 }
