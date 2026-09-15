@@ -15,21 +15,15 @@
 
         public Position Position => this.position;
 
-        public void Move(Command command)
+        public void MoveBackward()
         {
-            if (command == Command.Backward && heading == Heading.North)
+            this.position = this.heading switch
             {
-                this.position = new Position(this.position.X, this.position.Y - 1);
-            }
-            if (command == Command.Backward && heading == Heading.East)
-            {
-                this.position = new Position(this.position.X - 1, this.position.Y);
-            }
-
-            if (command == Command.Backward && heading == Heading.South)
-            {
-                this.position = new Position(this.position.X, this.position.Y + 1);
-            }
+                Heading.North => new Position(this.position.X, this.position.Y - 1),
+                Heading.South => new Position(this.position.X, this.position.Y + 1),
+                Heading.East => new Position(this.position.X - 1, this.position.Y),
+                _ => throw new NotImplementedException()
+            };
         }
     }
 }

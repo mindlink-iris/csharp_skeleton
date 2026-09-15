@@ -28,5 +28,10 @@ namespace MarsRover
             }
             return false;
         }
+
+        public override string ToString()
+        {
+            return $"{this.x}, {this.y}";
+        }
     }
 }

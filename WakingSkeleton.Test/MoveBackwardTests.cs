@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MarsRover;
+﻿using MarsRover;
 
 namespace WakingSkeleton.Test
 {
@@ -13,7 +8,7 @@ namespace WakingSkeleton.Test
         public void MoveBackwardFromNorthMovesDownByOne()
         {
             var rover = new Rover(new Position(1, 1), Heading.North);
-            rover.Move(Command.Backward);
+            rover.MoveBackward();
             Assert.That(rover.Position, Is.EqualTo(new Position(1,0)));
         }
 
@@ -21,7 +16,7 @@ namespace WakingSkeleton.Test
         public void MoveBackwardFromEastMovesLeftByOne()
         {
             var rover = new Rover(new Position(1, 1), Heading.East);
-            rover.Move(Command.Backward);
+            rover.MoveBackward();
             Assert.That(rover.Position, Is.EqualTo(new Position(0, 1)));
         }
 
@@ -29,7 +24,7 @@ namespace WakingSkeleton.Test
         public void MoveBackwardFromSouthMovesUpByOne()
         {
             var rover = new Rover(new Position(1, 1), Heading.South);
-            rover.Move(Command.Backward);
+            rover.MoveBackward();
             Assert.That(rover.Position, Is.EqualTo(new Position(1, 2)));
         }
     }
