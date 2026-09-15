@@ -22,6 +22,7 @@
                 Heading.North => new Position(this.position.X, this.position.Y - 1),
                 Heading.South => new Position(this.position.X, this.position.Y + 1),
                 Heading.East => new Position(this.position.X - 1, this.position.Y),
+                Heading.West => new Position(this.position.X + 1, this.position.Y),
                 _ => throw new NotImplementedException()
             };
         }

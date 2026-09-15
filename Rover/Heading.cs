@@ -10,6 +10,7 @@ namespace MarsRover
     {
         North,
         South,
-        East
+        East,
+        West
     }
 }
