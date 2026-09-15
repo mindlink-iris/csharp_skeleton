@@ -14,5 +14,13 @@
         public Heading Heading => this.heading;
 
         public Position Position => this.position;
+
+        public void Move(Command command)
+        {
+            if (command == Command.Backward && heading == Heading.North)
+            {
+                this.position = new Position(this.position.X, this.position.Y - 1);
+            }
+        }
     }
 }
