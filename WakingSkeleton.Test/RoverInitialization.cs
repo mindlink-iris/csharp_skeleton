@@ -9,7 +9,7 @@ public class Tests
     [Test]
     public void InitializeHeading()
     {
-        Rover rover = new Rover(Heading.North);
+        Rover rover = new Rover(new Position(2, 3), Heading.North);
         Assert.That(rover.Heading, Is.EqualTo(Heading.North));
     }
 
@@ -17,7 +17,7 @@ public class Tests
     {
         private Heading heading;
 
-        public Rover(Heading heading)
+        public Rover(Position position, Heading heading)
         {
             this.heading = heading;
         }
@@ -29,5 +29,12 @@ public class Tests
     {
         North,
         South
+    }
+
+    private class Position
+    {
+        public Position(int x, int y)
+        {
+        }
     }
 }
